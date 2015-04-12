@@ -16,6 +16,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Set $PYTHONPATH for ArchLinux
+let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+
 " Vim configuration
 syntax on
 set shell=/bin/bash
