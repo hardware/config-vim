@@ -1,10 +1,26 @@
-syntax on
-colorscheme koehler
+" Pathogen init
+execute pathogen#infect()
+filetype plugin indent on
 
-let $PYTHONPATH='/usr/lib/python3.4/site-packages'
+" Airline configuration
+let g:airline_theme = 'powerlineish'
+let g:airline_powerline_fonts = 1
+
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Vim configuration
+syntax on
+set shell=/bin/bash
 set laststatus=2
 set t_Co=256
-set rtp+=/usr/lib/python3.4/site-packages/powerline/bindings/vim/
 set guifont=Inconsolata\ for\ Powerline
 set encoding=utf-8 nobomb
 set ffs=unix,dos,mac
